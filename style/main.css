@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: white;
+}
+.nav-bar{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background: rgb(2, 44, 15);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+.nav-bar .second{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.nav-bar .second ul{
+    display: flex;
+}
+.nav-bar .second ul li{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.nav-bar .second ul li:hover{
+    color: rgb(8, 159, 141);
+    cursor: pointer;
+}
+.nav-bar .first .icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/*This is the beginning of the first section */
+.first-section{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.first-section .container{
+    width: 70%;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
+}
+/* This is for the images */
+.first-section .container .damyoung img{
+    width: 55%;
+}
+.first-section .container .linux img{
+    width: 51%;
+}
+.first-section .container .damyoung{
+    width: auto;
+}
+.first-section .container .left h2{
+    width: 54%;
+    background: rgb(2, 44, 15);
+    color: white;
+    align-items: center;
+    padding: 3px;
+    margin-top: -5px;
+}
+.first-section .container .linux h2{
+    width: 50%;
+    background: rgb(2, 44, 15);
+    color: white;
+    align-items: center;
+    padding: 3px;
+    margin-top: -5px;
+}
+/* For the microphone icon */
+.first-section .container .damyoung span{
+    padding-right: 10px;
+}
+.second-section{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding-bottom: 40px;
+}
+.second-section .container{
+    height: auto;
+    display: grid;
+    place-items: center;
+}
+.second-section center{
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    margin-top: 30px;
+    font-size: 30px;
+    border-bottom: 2px black double;
+}
+/* This is the about us section */
+.second-section .bout{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.second-section .cover{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 2fr));
+    grid-gap: 10px;
+    width: 90%;
+    padding: 5px;
+}
+
+.second-section .about fieldset{
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 130%;
+    text-align:justify;
+}
+
+.second-section .cover .about legend span img{
+    width: 4%;
+    border-radius: 50%;
+}
+/* This is the third section */
+.third-section{
+    background: #0b7599;
+    color: white;
+}
+.third-section ul{
+    font-size: 90%;
+    padding: 20px 0px 0px 20px;
+}
+.third-section .bout .cover .about fieldset div{
+    display: grid;
+    place-items: center;
+}
+.third-section .bout .cover .about fieldset div strong{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 20px 0px;
+    transition: ease 1s;
+}
+.third-section .bout .cover .about fieldset div strong a{
+    text-decoration: none;
+    color: white;
+}
+.third-section .bout .cover .about fieldset div strong a span{
+    padding-right: 10px;
+}
+/* This is for the resume download hover */
+.third-section .bout .cover .about fieldset div strong:hover{
+    background: white; 
+}
+.third-section .bout .cover .about fieldset div strong a:hover{
+    color: #0b7599;
+}
+
+/* This is the Portfolio website */
+.fourth-section{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.fourth-section .portfolio{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 2fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.fourth-section .portfolio .hbnb{
+    background: url(../images/hnb.png) no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.fourth-section .portfolio .monty{
+    background: url(../images/monty.png) no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.fourth-section .portfolio div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0b7599;
+    opacity: 0;
+    border-radius: 5px;
+}
+.fourth-section .portfolio div span{
+    z-index: 2;
+    color: white;
+    -webkit-text-stroke: 4px;
+    font-weight: bolder;
+    font-size: 23px;
+    position: absolute;
+    top: 5;
+    display: none;
+}
+.fourth-section .portfolio div:hover::before{
+    opacity: .8;
+}
+.fourth-section .portfolio div:hover span{
+    display: block;
+}
+
+/* This is the Education Section - Fifth section */
+.fifth-section{
+    background: #0b7599;
+    color: white;
+    width: 100%; 
+}
+.fifth-section .sector{
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+}
+.fifth-section .sector .title{
+    width: 20%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: space-around;
+    padding-left: 8%;
+}
+
+.fifth-section .sector .title span img{
+    width: 60%;
+    border-radius: 50%;
+    margin: 0;
+    margin-right: 0px;
+}
+.fifth-section .sector .title .adjust img{
+    width: 56%;
+    transform: translateX(-85%);
+    box-shadow: -3px -2px 5px black;
+}
+/* This is the write up of Education */
+.fifth-section .edukat{
+    width: auto;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+.fifth-section .edukat .writeme{
+    width: 80%;
+    padding: 20px;
+}
+.fifth-section .edukat .writeme ul{
+    padding: 20px;
+}
+.fifth-section .edukat .writeme ul li{
+    padding: 5px 0px;
+}
+/* This is the connect section - Footer Section */
+.sixth-section{
+    width: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 3fr));
+    background: rgb(2, 44, 15);
+}
+.sixth-section .location iframe{
+    width: 30vw;
+    height: 50vh;
+}
+.sixth-section .link{
+    display: grid;
+    place-items: center;
+    border-right: 1px solid white;
+}
+.sixth-section .et{
+    border-right: none;
+}
+.sixth-section .link h2{
+    color: white;
+}
+.sixth-section .media{
+    transform: translateY(-100px);
+}
+.sixth-section .media a{
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 2px;
+    font-size: 150%;
+}
+.sixth-section .media a:hover{
+    background: orange;
+    color: white;
+    border: none;
+
+}
