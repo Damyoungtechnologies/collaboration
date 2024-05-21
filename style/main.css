@@ -91,10 +91,11 @@ body{
 }
 .first-section .container .landing center{
     color: white;
-    background: linear-gradient(45deg, blue 60%, red 40%);
+    background: linear-gradient(45deg, red, blue 60%, red);
     padding: 10px 15px;
     border-radius: 15px;
     margin: 20px auto;
+    animation:infinite 10s ;
 }
 /* For the first-section picture */
 
