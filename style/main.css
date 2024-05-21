@@ -89,14 +89,24 @@ body{
     padding: 10px 0px;
     margin: 10px;
 }
-.first-section .container .landing center{
+.first-section .container .landing center a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cursive;
     color: white;
     background: linear-gradient(45deg, red, blue 60%, red);
     padding: 10px 15px;
     border-radius: 15px;
-    margin: 20px auto;
-    animation:infinite 10s display;
-    animation
+    margin-bottom: 40px;
+    animation:infinite 1s display;
+}
+@keyframes display {
+    0%{ background: linear-gradient(45deg, red, blue 60%, red);}
+    25%{ background: linear-gradient(45deg, blue, green 60%, red);}
+    50%{ background: linear-gradient(45deg, blue, red 60%, red);}
+    75%{ background: linear-gradient(45deg, red, blue 60%, red);}
+    0%{ background: linear-gradient(45deg, red, blue 60%, red);}
+
 }
 /* For the first-section picture */
 
