@@ -65,13 +65,14 @@ body{
 }
 .first-section .container{
     width: 70%;
-    display: grid;
+    display: flex;
+    flex-flow: row no-wrap;
     box-shadow: 2px 3px 5px black;
     background: rgba(255, 255, 255, 0.078);
     border-radius: 5px;
     box-sizing: border-box;
     padding: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
+    padding-bottom: 50px;
 }
 /* This is for the landing page write-up*/
 .first-section .container .landing{
@@ -108,10 +109,26 @@ body{
     0%{ background: linear-gradient(45deg, red, blue 60%, red);}
 
 }
-/* For the first-section picture */
 
-.first-section .container .picture span img{
-    width: 20%;
+.first-section .container .landing center a:hover{
+    animation: none;
+}
+/* For the first-section picture */
+.first-section .container .picture{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 40px 10px;
+}
+.first-section .container .picture .dam img{
+    width: 70%;
+    transform: translateX(50%);
+}
+.first-section .container .picture .wujin img{
+    width: 50%;
+    transform:translateY(50%);
 }
 .second-section{
     width: 100%;
