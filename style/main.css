@@ -95,7 +95,8 @@ body{
     padding: 10px 15px;
     border-radius: 15px;
     margin: 20px auto;
-    animation:infinite 10s ;
+    animation:infinite 10s display;
+    animation
 }
 /* For the first-section picture */
 
