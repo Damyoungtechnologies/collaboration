@@ -10,7 +10,7 @@ body{
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-    background: rgb(2, 44, 15);
+    /* background: rgb(2, 44, 15); */
     position: fixed;
     z-index: 3;
     width: 100%;
@@ -23,15 +23,25 @@ body{
 }
 .nav-bar .second ul{
     display: flex;
+    padding-right: 40px;
 }
 .nav-bar .second ul li{
     list-style: none;
-    text-transform: uppercase;
-    font-weight: bolder;
     padding: 10px;
+    align-items: center;
+}
+.nav-bar .second ul li a{
+    text-decoration: none;
+    font-weight: bolder;
     font-size: 14px;
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: cursive;
+}
+.nav-bar .second ul .concept a{
+    background: rgb(8, 159, 141);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 .nav-bar .second ul li:hover{
     color: rgb(8, 159, 141);
@@ -49,45 +59,47 @@ body{
     display: grid;
     place-items: center;
     background: url(../images/background.jpg);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .first-section .container{
     width: 70%;
     display: grid;
-    justify-content: space-evenly;
+    box-shadow: 2px 3px 5px black;
+    background: rgba(255, 255, 255, 0.078);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
 }
-/* This is for the images */
-.first-section .container .damyoung img{
-    width: 55%;
+/* This is for the landing page write-up*/
+.first-section .container .landing{
+    display: grid;
+    place-items: center;
+    width: 100%;
 }
-.first-section .container .linux img{
-    width: 51%;
-}
-.first-section .container .damyoung{
-    width: auto;
-}
-.first-section .container .left h2{
-    width: 54%;
-    background: rgb(2, 44, 15);
+.first-section .container .landing h2{
     color: white;
-    align-items: center;
-    padding: 3px;
-    margin-top: -5px;
+    font-family: cursive;
 }
-.first-section .container .linux h2{
-    width: 50%;
-    background: rgb(2, 44, 15);
+.first-section .container .landing p{
     color: white;
-    align-items: center;
-    padding: 3px;
-    margin-top: -5px;
+    text-align: justify;
+    padding: 10px 0px;
+    margin: 10px;
 }
-/* For the microphone icon */
-.first-section .container .damyoung span{
-    padding-right: 10px;
+.first-section .container .landing center{
+    color: white;
+    background: linear-gradient(45deg, blue 60%, red 40%);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+/* For the first-section picture */
+
+.first-section .container .picture span img{
+    width: 20%;
 }
 .second-section{
     width: 100%;
@@ -305,7 +317,7 @@ body{
     color: white;
 }
 .sixth-section .media{
-    transform: translateY(-100px);
+    /* transform: translateY(-100px); */
 }
 .sixth-section .media a{
     color: white;
