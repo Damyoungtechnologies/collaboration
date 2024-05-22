@@ -38,7 +38,7 @@ body{
     font-family: cursive;
 }
 .nav-bar .second ul .concept a{
-    background: rgb(8, 159, 141);
+    background: linear-gradient(90deg, rgb(18, 6, 100) 60%, rgba(3, 86, 97, 0.543));
     color: white;
     border-radius: 10px;
     padding: 10px;
@@ -48,9 +48,8 @@ body{
     cursor: pointer;
 }
 .nav-bar .first .icon img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 55px;
+    height: 47px;
 }
 /*This is the beginning of the first section */
 .first-section{
@@ -86,7 +85,6 @@ body{
 }
 .first-section .container .landing p{
     color: white;
-    text-align: justify;
     padding: 10px 0px;
     margin: 10px;
 }
@@ -324,39 +322,123 @@ body{
 }
 /* This is the connect section - Footer Section */
 .sixth-section{
-    width: auto;
+    background: url(../images/footer-background.png) repeat-x;
+    background-size: contain;
+    background-position: center;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 3fr));
-    background: rgb(2, 44, 15);
+    display: flex;
+    flex-wrap: row wrap;
+    
 }
-.sixth-section .location iframe{
-    width: 30vw;
-    height: 50vh;
-}
-.sixth-section .link{
+.sixth-section .location{
+    padding: 10px;
     display: grid;
     place-items: center;
-    border-right: 1px solid white;
+    width: 50%;
 }
-.sixth-section .et{
-    border-right: none;
+
+.sixth-section .location .message{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.087);
+    box-shadow: 2px 3px 5px black;
+    border-radius: 15px;
+    padding: 20px;
 }
-.sixth-section .link h2{
+.sixth-section .location .message .photo{
+    display: grid;
+    place-items: center;
+}
+.sixth-section .location .message .photo img{
+    width: 25%;
+    height: 65%;
+    border-radius: 15px;
+    padding: 10px;
+    background: black;
+    margin-bottom: 20px;
+}
+.sixth-section .location .message span{
+    width: auto;
+    display: flex;
+    align-items: center;
     color: white;
+}
+.sixth-section .location h3{
+    color: white;
+}
+.sixth-section .location .message input{
+    background: none;
+    border: none;
+    border-bottom: white 1px solid;
+    padding: 10px 10px;
+    margin-left: 7px;
+    width: 90%;
+    color: white;
+}
+.sixth-section .location .message input::placeholder{
+    color: white;
+}
+.sixth-section .location .message input:active{
+    border: none;
+}
+.sixth-section .location .message textarea{
+    background: none;
+    border: 1px double white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    resize: none;
+    color: white;
+}
+.sixth-section .location .message textarea::placeholder{
+    color: white;
+}
+.sixth-section .location .message button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, rgb(18, 6, 100) 60%, rgba(3, 86, 97, 0.543));
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: .8s ease-in;
+}
+.sixth-section .location .message button:hover{
+    border: white 1.5px dotted;
+} 
+
+/* This is for the social media link */
+
+.sixth-section .location .cannor{
+    background: linear-gradient(90deg, rgb(18, 6, 100) 60%, rgba(3, 86, 97, 0.543));
+    width: 60%;
+    
+}
+.sixth-section .location .cannor h2{
+    background: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
 }
 .sixth-section .media{
-    /* transform: translateY(-100px); */
+    display: flex;
+    justify-content: space-evenly;
 }
-.sixth-section .media a{
+.sixth-section .media a i{
+    text-decoration: none;
     color: white;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 50%;
-    margin: 2px;
-    font-size: 150%;
 }
-.sixth-section .media a:hover{
+.sixth-section .media div{
+    text-align: center;
+    padding: 10px 23%;
+    margin: 10px auto;
+}
+
+.sixth-section .media .linked a i{
+
+}
+.sixth-section .media div:hover{
     background: orange;
     color: white;
     border: none;
