@@ -8,46 +8,29 @@ window.addEventListener("scroll", function(){
     }
 })
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", () => {
     var about = document.querySelector(".about");
     var experience = document.querySelector(".experience");
     var portfolio = document.querySelector(".porto");
     var education = document.querySelector(".education");
     var connect = document.querySelector(".concept");
 
-    var scrollposition = window.scrollY || document.documentElement.scrollTop;
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollposition > 500 && scrollposition < 940){
-        about.style.backgroundColor = "white";
-        about.style.color = "black";
-        about.style.borderRadius = "10px";
-    }else{
-        about.style.backgroundColor = "transparent";
-    }
-    
-    if (scrollposition > 940 && scrollposition < 1400){
-        experience.style.backgroundColor = "white";
-        experience.style.color = "black";
-        experience.style.borderRadius = "10px";
-    }else{
-        experience.style.backgroundColor = "transparent";
+    function setBackgroundColorAndTextColor(element, start, end, bgColor, textColor) {
+        if (scrollPosition > start && scrollPosition < end) {
+            element.style.backgroundColor = bgColor;
+            element.style.color = textColor; // Change text color
+            element.style.borderRadius = "10px";
+        } else {
+            element.style.backgroundColor = "transparent";
+            element.style.color = "initial"; // Reset text color
+        }
     }
 
-    if (scrollposition > 1400 && scrollposition < 1620){
-        portfolio.style.backgroundColor = "white";
-        portfolio.style.color = "black";
-        portfolio.style.borderRadius = "10px";
-    }else{
-        portfolio.style.backgroundColor = "transparent";
-    }
-
-    if (scrollposition > 1620 && scrollposition < 2000){
-        education.style.backgroundColor = "white";
-        education.style.Color = "black";
-        education.style.borderRadius = "10px";
-    }else{
-        education.style.backgroundColor = "transparent";
-    }
-
-
-})
+    setBackgroundColorAndTextColor(about, 500, 940, "rgba(3, 86, 97, 0.8)", "black");
+    setBackgroundColorAndTextColor(experience, 940, 1400, "rgba(3, 86, 97, 0.8)", "black");
+    setBackgroundColorAndTextColor(portfolio, 1400, 1630, "rgba(3, 86, 97, 0.8)", "black");
+    setBackgroundColorAndTextColor(education, 1630, 2000, "rgba(3, 86, 97, 0.8)", "black");
+    // setBackgroundColorAndTextColor(connect, 2000, 2100, "white", "black");
+});
