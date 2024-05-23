@@ -14,6 +14,7 @@ body{
     position: fixed;
     z-index: 3;
     width: 100%;
+    /* display: none; */
 }
 
 .nav-bar .second{
@@ -47,16 +48,36 @@ body{
     color: rgb(8, 159, 141);
     cursor: pointer;
 }
+
 .nav-bar .first .icon img{
     width: 55px;
     height: 47px;
 }
+.nav-bar .second .toggle{
+    color: white;
+    font-size: 50%;
+    display: none;
+}
+/* This is the beginning of media query for the nav bar */
+@media only screen and (max-width: 700px){
+.nav-bar .second ul{
+    display: none;
+}
+.nav-bar .second .toggle{
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+.nav-bar .second .toggle .toggle_off{
+    display: none;
+}
+}
 /*This is the beginning of the first section */
 .first-section{
     width: 100%;
-    height: 100vh;
+    padding: 40px 0px;
     display: grid;
-    place-items: center;
+    place-items:center;
     background: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
@@ -64,6 +85,7 @@ body{
 }
 .first-section .container{
     width: 70%;
+    margin: 80px auto;
     display: flex;
     flex-flow: row no-wrap;
     box-shadow: 2px 3px 5px black;
@@ -128,6 +150,62 @@ body{
     width: 50%;
     transform:translateY(50%);
 }
+
+/* This is the beginning of the media query for the first section */
+    /* This is the media query at 700px */
+@media only screen and (max-width: 700px){
+    /* For the landing page */
+    .first-section .container{
+        flex-flow: column wrap;
+    }
+    .first-section .container .landing{
+        order: 2;
+    }
+    .first-section .container .picture{
+        order: 1;
+        margin-bottom: 45px;
+    }
+    .first-section .container .landing p{
+        color: white;
+        text-align: center;
+    }
+    .first-section .container .picture .dam img{
+        width: 90%;
+    }
+    .first-section .container .picture .wujin img{
+        width: 65%;
+        
+    }
+}
+@media only screen and (max-width: 400px){
+    /* This is the media query at 400px */
+    .first-section .container{
+        width: 90%;
+        padding: 20px 10px;
+        margin: 40px auto auto auto;
+    }
+    .first-section .container .picture{
+        margin-bottom: 20px;
+    }
+    .first-section .container .landing p{
+        color: white;
+        text-align: center;
+        text-shadow: 1px 2px 3px black;
+    }
+    .first-section .container .picture .dam img{
+        width: 120%;
+    }
+    .first-section .container .picture .wujin img{
+        width: 75%;
+        padding-left: 30px;
+    }
+    .nav-bar .first .icon img{
+        width: 50px;
+        height: 42px;
+    }
+}
+/* This is the end of the media query for the first section */
+/* This is the "about us" section */
 .second-section{
     width: 100%;
     height: auto;
@@ -140,19 +218,16 @@ body{
     place-items: center;
 }
 .second-section center{
-    display: inline-block;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 5px;
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 140%;
     border-bottom: 2px black double;
 }
-/* This is the about us section */
 .second-section .bout{
     display: grid;
     place-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .second-section .cover{
     display: grid;
@@ -165,14 +240,43 @@ body{
 .second-section .about fieldset{
     padding: 8px;
     border-radius: 5px;
-    font-size: 130%;
+    font-size: 110%;
     text-align:justify;
 }
 
 .second-section .cover .about legend span img{
-    width: 4%;
+    width: 6%;
     border-radius: 50%;
+    margin-bottom: -5px;
 }
+/* This is the beginning of the media query of about us section */
+@media only screen and (max-width: 400px){
+    .second-section .cover{
+        grid-gap: 10px;
+        margin-left: -25px;
+    }
+    .second-section .bout{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .second-section .cover .about{
+        width: 80%;
+    }
+    .second-section .about fieldset{
+        padding: 8px;
+        border-radius: 5px;
+        width: 110%;
+        /* font-size: 110%; */
+        margin-left: 20px;
+    }
+    .second-section .cover .about legend span img{
+        width: 10%;
+        margin-bottom: -5px;
+    }
+}
+/* This is the end of the media query of about us section */
 /* This is the third section */
 .third-section{
     background: #0b7599;
@@ -207,26 +311,39 @@ body{
 .third-section .bout .cover .about fieldset div strong a:hover{
     color: #0b7599;
 }
+/* This is the beginning of the media query of the experience section */
+@media only screen and (max-width: 700px){
+    .third-section ul{
+        font-size: 80%;
+        text-align: left;
+    }
+    .third-section .bout .cover .about fieldset div strong a{
+        font-size: 15px;
+    }
+}
+/* This is the end of the media query of the experience session
 
-/* This is the Portfolio website */
+/* This is the Portfolio section */
 .fourth-section{
     width: 100%;
     display: grid;
     place-items: center;
 }
 .fourth-section .portfolio{
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 2fr));
-    grid-gap: 20px;
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
+    justify-content: space-between;
 }
 .fourth-section .portfolio .hbnb{
     background: url(../images/hnb.png) no-repeat;
     background-size: cover;
-    width: 60%;
-    height: 5rem;
+    width: 35%;
+    height: 7.5rem;
     display: grid;
     place-items: center;
     position: relative;
@@ -236,8 +353,8 @@ body{
 .fourth-section .portfolio .monty{
     background: url(../images/monty.png) no-repeat;
     background-size: cover;
-    width: 60%;
-    height: 5rem;
+    width: 40%;
+    height: 7.5rem;
     display: grid;
     place-items: center;
     position: relative;
@@ -271,6 +388,47 @@ body{
 .fourth-section .portfolio div:hover span{
     display: block;
 }
+/* This is the beginning of media query for the portfolio session */
+    /* This is the media query at 700px */
+@media only screen and (max-width: 700px){
+    .fourth-section .portfolio{
+        flex-flow: column wrap;
+    }
+    .fourth-section .portfolio .hbnb{
+        width: 60%;
+        height: 8rem;
+        margin-bottom: 30px;
+    }
+    .fourth-section .portfolio .monty{
+        width: 70%;
+        height: 8rem;
+    }
+}
+    /* This is the media query at 500px */
+    @media only screen and (max-width: 500px){
+        .fourth-section .portfolio .hbnb{
+            width: 80%;
+            height: 8rem;
+            margin-bottom: 30px;
+        }
+        .fourth-section .portfolio .monty{
+            width: 90%;
+            height: 8rem;
+        }
+    }
+    /* This is the media query at 400px */
+    @media only screen and (max-width: 400px){
+        .fourth-section .portfolio .hbnb{
+            width: 80%;
+            height: 5.5rem;
+            margin-bottom: 30px;
+        }
+        .fourth-section .portfolio .monty{
+            width: 90%;
+            height: 5.5rem;
+        }
+    }
+/* This is the end of the media query of the portfolio session */
 
 /* This is the Education Section - Fifth section */
 .fifth-section{
@@ -284,7 +442,7 @@ body{
     place-items: center;
 }
 .fifth-section .sector .title{
-    width: 20%;
+    width: 30%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -305,7 +463,6 @@ body{
 }
 /* This is the write up of Education */
 .fifth-section .edukat{
-    width: auto;
     display: grid;
     place-items: center;
     padding: 10px;
@@ -320,21 +477,42 @@ body{
 .fifth-section .edukat .writeme ul li{
     padding: 5px 0px;
 }
+/* This is the beginning of the media query of the eduction section */
+@media only screen and (max-width: 500px){
+    .fifth-section .sector .title{
+        width: 50%;
+    }  
+}
+@media only screen and (max-width: 400px){
+    .fifth-section .sector .title{
+        width: 50%;
+    }  
+    .fifth-section .edukat .writeme{
+        width: 90%;
+    }
+    .fifth-section .sector .title span img{
+        width: 80%;
+    }
+    .fifth-section .sector .title .adjust img{
+        width: 76%;
+        transform: translateX(-45%);
+    }
+}
+/* This is the end of the media query of education section */
 /* This is the connect section - Footer Section */
 .sixth-section{
     background: url(../images/footer-background.png) repeat-x;
     background-size: contain;
     background-position: center;
-    padding: 10px;
+    padding: 15px 10px;
     display: flex;
-    flex-wrap: row wrap;
-    
+    flex-flow: row wrap;
+    justify-content: center;
 }
 .sixth-section .location{
     padding: 10px;
     display: grid;
     place-items: center;
-    width: 50%;
 }
 
 .sixth-section .location .message{
@@ -378,8 +556,8 @@ body{
 .sixth-section .location .message input::placeholder{
     color: white;
 }
-.sixth-section .location .message input:active{
-    border: none;
+.sixth-section .location .message input:focus{
+    outline: none;
 }
 .sixth-section .location .message textarea{
     background: none;
@@ -411,8 +589,7 @@ body{
 
 .sixth-section .location .cannor{
     background: linear-gradient(90deg, rgb(18, 6, 100) 60%, rgba(3, 86, 97, 0.543));
-    width: 60%;
-    
+    color: white;
 }
 .sixth-section .location .cannor h2{
     background: black;
@@ -423,7 +600,8 @@ body{
 }
 .sixth-section .media{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    box-sizing: border-box;
 }
 .sixth-section .media a i{
     text-decoration: none;
@@ -431,16 +609,17 @@ body{
 }
 .sixth-section .media div{
     text-align: center;
-    padding: 10px 23%;
-    margin: 10px auto;
-}
-
-.sixth-section .media .linked a i{
-
+    padding: 10px 40px;
+    margin: 5px auto;
 }
 .sixth-section .media div:hover{
     background: orange;
     color: white;
     border: none;
-
+}
+/* This is the beginning of the media query for connect section */
+@media only screen and (max-width: 700px){
+    .sixth-section{
+        background-repeat: repeat-y;
+    }
 }
