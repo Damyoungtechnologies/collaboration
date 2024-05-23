@@ -343,7 +343,7 @@ body{
     background: url(../images/hnb.png) no-repeat;
     background-size: cover;
     width: 35%;
-    height: 7.5rem;
+    height: 8rem;
     display: grid;
     place-items: center;
     position: relative;
@@ -354,7 +354,7 @@ body{
     background: url(../images/monty.png) no-repeat;
     background-size: cover;
     width: 40%;
-    height: 7.5rem;
+    height: 8rem;
     display: grid;
     place-items: center;
     position: relative;
