@@ -26,9 +26,23 @@
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.1.1-web/css/v5-font-face.min.css">
 </head>
 <body>
-    <div class="nav-bar">
-        <div class="first"><span class="icon"><img src="images/favicon.png" alt="My Icon"></span></div>
-        <div class="second">
+    <div class="capture">
+        <div class="nav-bar">
+            <div class="first"><span class="icon"><img src="images/favicon.png" alt="My Icon"></span></div>
+            <div class="second">
+                <ul>
+                    <li class="about"><a href="">About</a></li>
+                    <li class="experience"><a href="">Experience</a></li>
+                    <li class="porto"><a href="">Porfolio</a></li>
+                    <li class="education"><a href="">Education</a></li>
+                    <li class="concept"><a href="">Connect</a></li>
+                </ul>
+                <span class="toggle"><span id="toggle_on"><i class="fa fa-bars" aria-hidden="true"></i></span><span id="toggle_off"><i class="fa fa-window-close" aria-hidden="true"></i></span></span>
+                <!-- <input type="color" id="color"> -->
+            </div>
+        </div>
+        <!-- This is the dropdown for the mobile view -->
+        <div class="dropdown">
             <ul>
                 <li class="about"><a href="">About</a></li>
                 <li class="experience"><a href="">Experience</a></li>
@@ -36,10 +50,10 @@
                 <li class="education"><a href="">Education</a></li>
                 <li class="concept"><a href="">Connect</a></li>
             </ul>
-            <span class="toggle"><span class="toggle_on"><i class="fa fa-bars" aria-hidden="true"></i></span><span class="toggle_off"><i class="fa fa-window-close" aria-hidden="true"></i></span></span>
-            <!-- <input type="color" id="color"> -->
         </div>
+        
     </div>
+    <!-- This is the beginning of the first section -->
     <div class="first-section">
         <div class="container">
             <div class="landing">
@@ -198,6 +212,7 @@
     </div>
     <center style="color: white; padding: 10px; background: black; font-weight: bolder;">&copy; ALX Foundation Phase Project 2024</center>
     <script src="nav.js"></script>
+    <script src="dropdown.js"></script>
     <!-- <script>
     var color = document.getElementById("color");
 
