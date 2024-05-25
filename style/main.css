@@ -312,7 +312,7 @@ body{
     .second-section .about fieldset{
         padding: 8px;
         border-radius: 5px;
-        width: 110%;
+        width: 90%;
         /* font-size: 110%; */
         margin-left: 20px;
     }
@@ -464,12 +464,12 @@ body{
     /* This is the media query at 400px */
     @media only screen and (max-width: 400px){
         .fourth-section .portfolio .hbnb{
-            width: 80%;
+            width: 100%;
             height: 5.5rem;
             margin-bottom: 30px;
         }
         .fourth-section .portfolio .monty{
-            width: 90%;
+            width: 110%;
             height: 5.5rem;
         }
     }
@@ -566,7 +566,7 @@ body{
     background: rgba(255, 255, 255, 0.087);
     box-shadow: 2px 3px 5px black;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
 }
 .sixth-section .location .message .photo{
     display: grid;
@@ -666,5 +666,13 @@ body{
 @media only screen and (max-width: 700px){
     .sixth-section{
         background-repeat: repeat-y;
+    }
+}
+@media only screen and (max-width: 700px){
+    .sixth-section{
+        background-repeat: repeat-y;
+    }
+    .sixth-section .location .message{
+        padding: 10px;
     }
 }
