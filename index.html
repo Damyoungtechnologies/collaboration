@@ -63,7 +63,7 @@
                     This project is one of the requirements needed to pass the foundation phase of
                     <b>ALX</b> software engineering programme.
                 </p>
-                <center><a href="">Hire us</a></center>
+                <center><a href="" id="hire">Hire us</a></center>
             </div>
             <div class="picture">
                 <span class="dam" title="Samuel Ayodeji"><img src="images/damyoung_photo.jpg" alt=""></span>
@@ -184,9 +184,9 @@
             <div class="message">
                 <form action="https://formspree.io/f/xbjepqyz" method="post">
                     <div class="photo"><img src="images/favicon.png" alt=""></div>
-                    <span><i class="fa fa-user" aria-hidden="true"></i><input type="text" name="name" id="name" placeholder="Enter your name"></span><br>
-                    <span><i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Enter your email"></span><br>
-                    <textarea name="message" id="message" cols="25" rows="10" placeholder="Enter your message"></textarea><br>
+                    <span><i class="fa fa-user" aria-hidden="true"></i><input type="text" name="name" id="name" placeholder="Enter your name" required></span><br>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Enter your email" required></span><br>
+                    <textarea name="message" id="message" cols="25" rows="10" placeholder="Enter your message" required></textarea><br>
                     <button type="submit">Connect</button>
                 </form>
             </div>
@@ -227,6 +227,7 @@
         var fifth = document.getElementById("fifth");
         var connect = document.getElementById("connectme");
         var sixth = document.getElementById("sixth");
+        var hire = document.getElementById("hire");
         function smoothBehavior(head, tail){
             head.addEventListener("click", function(event){
             event.preventDefault();
@@ -241,6 +242,7 @@
         smoothBehavior(portfolio, fourth);
         smoothBehavior(education, fifth);
         smoothBehavior(connect, sixth);
+        smoothBehavior(hire, sixth);
         
     </script>
 
