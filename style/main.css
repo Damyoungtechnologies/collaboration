@@ -230,15 +230,22 @@ body{
     /* This is the media query at 400px */
     .first-section .container{
         width: 90%;
-        padding: 20px 10px;
+        padding: 30px 10px;
         margin: 40px auto auto auto;
     }
     .first-section .container .picture{
         margin-bottom: 20px;
     }
+    .first-section .container .landing h2{
+        margin-top: 20px;
+        /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    }
     .first-section .container .landing p{
         color: white;
         text-align: center;
+        /* color: orange; */
+        margin-top: -10px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         text-shadow: 1px 2px 3px black;
     }
     .first-section .container .picture .dam img{
@@ -251,6 +258,9 @@ body{
     .nav-bar .first .icon img{
         width: 50px;
         height: 42px;
+    }
+    .first-section .container .landing center{
+        margin: 10px auto;
     }
 }
 /* This is the end of the media query for the first section */
@@ -316,7 +326,7 @@ body{
     .second-section .about fieldset{
         padding: 8px;
         border-radius: 5px;
-        width: 90%;
+        width: 110%;
         /* font-size: 110%; */
         margin-left: 20px;
     }
