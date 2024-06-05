@@ -44,11 +44,11 @@
         <!-- This is the dropdown for the mobile view -->
         <div class="dropdown">
             <ul>
-                <li class="" id="aboutme"><a href="">About</a></li>
-                <li class="experience" id="experienceme"><a href="">Experience</a></li>
-                <li class="porto" id="portfoliome"><a href="">Porfolio</a></li>
-                <li class="education" id="educationme"><a href="">Education</a></li>
-                <li class="concept" id="connectme"><a href="">Connect</a></li>
+                <li class="" id="aboutme1"><a href="">About</a></li>
+                <li class="experience" id="experienceme1"><a href="">Experience</a></li>
+                <li class="porto" id="portfoliome1"><a href="">Porfolio</a></li>
+                <li class="education" id="educationme1"><a href="">Education</a></li>
+                <li class="concept" id="connectme1"><a href="">Connect</a></li>
             </ul>
         </div>
         
@@ -218,14 +218,19 @@
     <!-- Here is the script for scroll into view -->
     <script>
         var about = document.getElementById("aboutme");
+        var about1 = document.getElementById("aboutme1");
         var second = document.getElementById("second");
         var experience = document.getElementById("experienceme");
+        var experience1 = document.getElementById("experienceme1");
         var third = document.getElementById("third");
         var portfolio = document.getElementById("portfoliome");
+        var portfolio1 = document.getElementById("portfoliome1");
         var fourth = document.getElementById("fourth");
         var education = document.getElementById("educationme");
+        var education1 = document.getElementById("educationme1");
         var fifth = document.getElementById("fifth");
         var connect = document.getElementById("connectme");
+        var connect1 = document.getElementById("connectme1");
         var sixth = document.getElementById("sixth");
         var hire = document.getElementById("hire");
         function smoothBehavior(head, tail){
@@ -242,6 +247,11 @@
         smoothBehavior(portfolio, fourth);
         smoothBehavior(education, fifth);
         smoothBehavior(connect, sixth);
+        smoothBehavior(about1, second);
+        smoothBehavior(experience1, third);
+        smoothBehavior(portfolio1, fourth);
+        smoothBehavior(education1, fifth);
+        smoothBehavior(connect1, sixth);
         smoothBehavior(hire, sixth);
         
     </script>
