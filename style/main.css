@@ -270,8 +270,8 @@ body{
         text-align: center;
         /* color: orange; */
         margin-top: -10px;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-shadow: 1px 2px 3px black;
+        /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: 1px 2px 3px black; */
     }
     .first-section .container .picture .dam img{
         width: 120%;
